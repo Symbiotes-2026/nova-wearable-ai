@@ -1,12 +1,33 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navigation from '@/components/Navigation';
+import Hero from '@/components/Hero';
+import WhySection from '@/components/sections/WhySection';
+import WhatSection from '@/components/sections/WhatSection';
+import HowSection from '@/components/sections/HowSection';
+import TimeSection from '@/components/sections/TimeSection';
+import FormFactorsSection from '@/components/sections/FormFactorsSection';
+import DifferenceSection from '@/components/sections/DifferenceSection';
+import TechSection from '@/components/sections/TechSection';
+import SocialProofSection from '@/components/sections/SocialProofSection';
+import PricingSection from '@/components/sections/PricingSection';
+import FAQSection from '@/components/sections/FAQSection';
+import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Navigation />
+      <Hero />
+      <WhySection />
+      <WhatSection />
+      <HowSection />
+      <TimeSection />
+      <FormFactorsSection />
+      <DifferenceSection />
+      <TechSection />
+      <SocialProofSection />
+      <PricingSection />
+      <FAQSection />
+      <Footer />
     </div>
   );
 };
