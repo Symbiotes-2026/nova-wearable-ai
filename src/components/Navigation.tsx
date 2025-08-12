@@ -18,6 +18,7 @@ const Navigation = () => {
     { href: '#what', label: 'What' },
     { href: '#how', label: 'How' },
     { href: '#forms', label: 'Wearables' },
+    { href: '#design', label: 'Design' },
     { href: '#pricing', label: 'Access' }
   ];
 
