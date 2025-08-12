@@ -8,25 +8,25 @@ const FormFactorsSection = () => {
     {
       image: glassesImage,
       title: "Glasses",
-      description: "fastest voice pickup; head gestures; bone-conduction cue.",
+      description: "fastest voice pickup; head gestures; bone-conduction",
       features: ["Voice optimized", "Head gestures", "Bone conduction"]
     },
     {
       image: pendantImage,
       title: "Pendant",
-      description: "perfect for SOS triple-tap + breathing-coach haptics.",
+      description: "SOS triple-tap + breathing-coach haptics",
       features: ["SOS ready", "Haptic feedback", "Discreet wearing"]
     },
     {
       image: braceletImage,
-      title: "Bracelet",
-      description: "best HRV/stress & heat nudges; great gesture control.",
+      title: "Bracelet", 
+      description: "HRV/stress monitoring + gesture control",
       features: ["Health tracking", "Gesture control", "Always accessible"]
     },
     {
       image: hatImage,
       title: "Hat/Cap",
-      description: "hands-free assistant; great antenna height for mesh SOS.",
+      description: "hands-free assistant; mesh SOS antenna height",
       features: ["Hands-free", "Mesh network", "Sports friendly"]
     }
   ];

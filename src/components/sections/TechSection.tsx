@@ -5,22 +5,22 @@ const TechSection = () => {
     {
       icon: Cpu,
       title: "Edge processing",
-      description: "Wake-word, tiny STT, intent router, gesture engine."
+      description: "Wake-word, tiny STT, intent router, gesture engine"
     },
     {
       icon: Smartphone,
       title: "Platform integration",
-      description: "Android Intents / iOS Shortcuts for rich actions."
+      description: "Android Intents / iOS Shortcuts for rich actions"
     },
     {
       icon: Lock,
       title: "Privacy first",
-      description: "Encrypted routines & SOS; hardware mic kill-switch."
+      description: "Encrypted routines + SOS; hardware mic kill-switch"
     },
     {
       icon: Mic,
       title: "On-device audio",
-      description: "Raw audio for core intents stays on-device."
+      description: "Raw audio for core intents stays on-device"
     }
   ];
 

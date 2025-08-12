@@ -6,6 +6,7 @@ import HowSection from '@/components/sections/HowSection';
 import TimeSection from '@/components/sections/TimeSection';
 import FormFactorsSection from '@/components/sections/FormFactorsSection';
 import DesignDetailsSection from '@/components/sections/DesignDetailsSection';
+import DesignVariationsSection from '@/components/sections/DesignVariationsSection';
 import DifferenceSection from '@/components/sections/DifferenceSection';
 import TechSection from '@/components/sections/TechSection';
 import SocialProofSection from '@/components/sections/SocialProofSection';
@@ -24,6 +25,7 @@ const Index = () => {
       <TimeSection />
       <FormFactorsSection />
       <DesignDetailsSection />
+      <DesignVariationsSection />
       <DifferenceSection />
       <TechSection />
       <SocialProofSection />
