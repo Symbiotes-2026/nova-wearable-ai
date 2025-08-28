@@ -33,46 +33,36 @@ const FormFactorsSection = () => {
 
   return (
     <section id="forms" className="section-padding bg-background">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Snap the core into{' '}
-            <span className="text-gradient">what you wear</span>
+      <div className="container mx-auto px-8">
+        <div className="text-center mb-20">
+          <h2 className="headline mb-8 text-foreground">
+            One core. Many ways to wear.
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            One core, many ways to wear. Choose the form factor that fits your lifestyle.
+          <p className="body-large text-muted-foreground max-w-2xl mx-auto">
+            Choose the form factor that fits your lifestyle.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {formFactors.map((factor, index) => (
             <div
               key={index}
-              className="glass-card p-6 hover-lift animate-fade-in group"
+              className="bg-card rounded-3xl overflow-hidden hover-lift group border border-border"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="relative mb-6">
+              <div className="relative aspect-square">
                 <img
                   src={factor.image}
-                  alt={`Nova AI Assistant ${factor.title} form factor`}
-                  className="w-full h-48 object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
+                  alt={`Nova ${factor.title}`}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-10 rounded-xl transition-opacity duration-300" />
               </div>
               
-              <h3 className="text-xl font-semibold mb-3">{factor.title}</h3>
-              
-              <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
-                {factor.description}
-              </p>
-
-              <div className="space-y-2">
-                {factor.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-center space-x-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    <span className="text-sm text-muted-foreground">{feature}</span>
-                  </div>
-                ))}
+              <div className="p-6">
+                <h3 className="text-xl font-medium mb-2 text-foreground">{factor.title}</h3>
+                <p className="text-muted-foreground text-sm">
+                  {factor.description}
+                </p>
               </div>
             </div>
           ))}

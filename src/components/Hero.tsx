@@ -4,59 +4,49 @@ import heroImage from '@/assets/nova-core-hero.jpg';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 hero-gradient" />
-      
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div className="text-center lg:text-left animate-fade-in">
-            <h1 className="text-5xl lg:text-7xl font-bold mb-6 tracking-tight">
-              Do more in{' '}
-              <span className="text-gradient">2 seconds</span>
-            </h1>
-            
-            <p className="text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed">
-              Nova is a Jarvis-style AI assistant you wear. Speak or tap—Nova handles 
-              reminders, quick texts, live location, meetings, and translate. No phone unlock. 
-              Private by design.
-            </p>
+    <section className="min-h-screen flex items-center justify-center relative bg-background">
+      <div className="container mx-auto px-8 relative z-10">
+        <div className="text-center max-w-4xl mx-auto">
+          {/* Hero headline */}
+          <h1 className="display-large mb-8 text-foreground">
+            Do more in{' '}
+            <span className="text-gradient">2 seconds</span>
+          </h1>
+          
+          {/* Subheadline */}
+          <p className="body-large text-muted-foreground mb-12 max-w-3xl mx-auto">
+            Nova is a Jarvis-style AI assistant you wear. Speak or tap—Nova handles 
+            reminders, quick texts, live location, meetings, and translate.
+          </p>
 
-            {/* Badges */}
-            <div className="flex flex-wrap gap-3 justify-center lg:justify-start mb-8">
-              <Badge variant="outline" className="glass">
-                Edge AI
-              </Badge>
-              <Badge variant="outline" className="glass">
-                Works offline for core commands
-              </Badge>
-              <Badge variant="outline" className="glass">
-                Mic kill-switch
-              </Badge>
-            </div>
-
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button variant="hero" size="lg" className="text-lg px-8">
-                Get Early Access
-              </Button>
-              <Button variant="glass" size="lg" className="text-lg px-8">
-                Watch 15-sec Demo
-              </Button>
-            </div>
+          {/* Product image */}
+          <div className="relative mb-16">
+            <img
+              src={heroImage}
+              alt="Nova AI Assistant Core"
+              className="w-full max-w-2xl mx-auto h-auto rounded-3xl shadow-nova"
+            />
           </div>
 
-          {/* Visual */}
-          <div className="relative flex justify-center lg:justify-end animate-fade-in">
-            <div className="relative">
-              <img
-                src={heroImage}
-                alt="Nova AI Assistant Core with modular shells for glasses, hat, pendant, and bracelet"
-                className="w-full max-w-lg h-auto rounded-2xl shadow-nova animate-glow-pulse"
-              />
-              <div className="absolute inset-0 bg-gradient-primary opacity-10 rounded-2xl" />
-            </div>
+          {/* Features */}
+          <div className="flex flex-wrap gap-6 justify-center mb-12 text-sm text-muted-foreground">
+            <span>Edge AI</span>
+            <span>•</span>
+            <span>Works offline</span>
+            <span>•</span>
+            <span>Mic kill-switch</span>
+            <span>•</span>
+            <span>Private by design</span>
+          </div>
+
+          {/* CTA */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="rounded-full px-8 py-3 text-base">
+              Get Early Access
+            </Button>
+            <Button variant="outline" size="lg" className="rounded-full px-8 py-3 text-base">
+              Watch Demo
+            </Button>
           </div>
         </div>
       </div>

@@ -2,44 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Nova AI Design System - Premium dark theme with glassmorphism */
+/* Apple-inspired Design System - Clean & Minimalist */
 
 @layer base {
   :root {
-    --background: 0 0% 8%;
-    --foreground: 0 0% 95%;
-    --card: 0 0% 12%;
-    --card-foreground: 0 0% 95%;
-    --popover: 0 0% 12%;
-    --popover-foreground: 0 0% 95%;
-    --primary: 0 0% 90%;
-    --primary-foreground: 0 0% 8%;
-    --secondary: 0 0% 16%;
-    --secondary-foreground: 0 0% 95%;
-    --muted: 0 0% 16%;
-    --muted-foreground: 0 0% 65%;
-    --accent: 0 0% 16%;
-    --accent-foreground: 0 0% 95%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 6%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 6%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 6%;
+    --primary: 0 0% 6%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 6%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 210 100% 48%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 20%;
-    --input: 0 0% 16%;
-    --ring: 0 0% 83%;
+    --border: 0 0% 90%;
+    --input: 0 0% 96%;
+    --ring: 210 100% 48%;
 
-    /* Glassmorphism surfaces */
-    --glass: 0 0% 15%;
-    --glass-border: 0 0% 25%;
-    --glass-foreground: 0 0% 95%;
+    /* Apple surfaces */
+    --glass: 0 0% 100%;
+    --glass-border: 0 0% 90%;
+    --glass-foreground: 0 0% 6%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(0 0% 90%), hsl(0 0% 70%));
-    --gradient-glass: linear-gradient(145deg, hsl(0 0% 15% / 0.8), hsl(0 0% 15% / 0.4));
-    --gradient-hero: radial-gradient(ellipse at center, hsl(0 0% 90% / 0.1) 0%, transparent 70%);
+    /* Clean gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(0 0% 6%), hsl(0 0% 25%));
+    --gradient-glass: linear-gradient(145deg, hsl(0 0% 100% / 0.95), hsl(0 0% 100% / 0.8));
+    --gradient-hero: linear-gradient(180deg, hsl(0 0% 98%), hsl(0 0% 100%));
     
-    /* Shadows and glows */
-    --shadow-nova: 0 0 40px hsl(0 0% 90% / 0.1);
-    --shadow-glass: 0 8px 32px hsl(0 0% 0% / 0.4);
-    --shadow-card: 0 4px 16px hsl(0 0% 0% / 0.3);
+    /* Refined shadows */
+    --shadow-nova: 0 4px 20px hsl(0 0% 0% / 0.08);
+    --shadow-glass: 0 8px 32px hsl(0 0% 0% / 0.12);
+    --shadow-card: 0 2px 12px hsl(0 0% 0% / 0.05);
 
     --radius: 1rem;
 
@@ -71,7 +71,9 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', 'system-ui', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
   }
 
   html {
@@ -80,16 +82,16 @@
 }
 
 @layer components {
-  /* Glassmorphism utilities */
+  /* Apple-style surfaces */
   .glass {
-    @apply bg-glass/80 backdrop-blur-xl border border-glass-border/50;
+    @apply bg-glass backdrop-blur-xl border border-glass-border;
   }
   
   .glass-card {
     @apply glass rounded-2xl shadow-[var(--shadow-glass)];
   }
 
-  /* Nova glow effects */
+  /* Refined effects */
   .nova-glow {
     box-shadow: var(--shadow-nova);
   }
@@ -98,18 +100,39 @@
     background: var(--gradient-hero);
   }
 
-  /* Animation classes */
+  /* Apple-style animations */
   .fade-in-up {
     @apply animate-fade-in;
   }
 
   .hover-lift {
-    @apply transition-all duration-300 hover:scale-105 hover:-translate-y-1;
+    @apply transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1;
   }
 
-  /* Section spacing */
+  /* Apple-style spacing */
   .section-padding {
-    @apply py-20 lg:py-32;
+    @apply py-24 lg:py-40;
+  }
+
+  /* Typography classes */
+  .display-large {
+    @apply text-5xl lg:text-7xl font-semibold tracking-tight leading-none;
+  }
+
+  .display-medium {
+    @apply text-4xl lg:text-6xl font-medium tracking-tight;
+  }
+
+  .headline {
+    @apply text-3xl lg:text-5xl font-medium tracking-tight;
+  }
+
+  .body-large {
+    @apply text-xl lg:text-2xl font-normal leading-relaxed;
+  }
+
+  .body {
+    @apply text-lg leading-relaxed;
   }
 }
 

@@ -112,10 +112,10 @@ export default {
 				},
 				'glow-pulse': {
 					'0%, 100%': {
-						boxShadow: '0 0 20px hsl(var(--nova-blue) / 0.3)'
+						boxShadow: '0 4px 20px hsl(0 0% 0% / 0.08)'
 					},
 					'50%': {
-						boxShadow: '0 0 40px hsl(var(--nova-blue) / 0.6)'
+						boxShadow: '0 8px 32px hsl(0 0% 0% / 0.16)'
 					}
 				}
 			},
