@@ -105,26 +105,26 @@ const DesignVariationsSection = () => {
   };
 
   return (
-    <section id="variations" className="section-padding bg-secondary">
-      <div className="container mx-auto px-8">
-        <div className="text-center mb-20">
-          <h2 className="headline mb-8 text-foreground">
-            Choose your style
+    <section id="variations" className="section-padding bg-background">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+            <span className="text-gradient">10 unique designs</span> per form
           </h2>
-          <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-            10 unique designs per form factor
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Color view • Sketch view • 360° rotation
           </p>
         </div>
 
         {/* Category Tabs */}
-        <div className="flex justify-center mb-16">
-          <div className="bg-background rounded-full p-1 inline-flex">
+        <div className="flex justify-center mb-12">
+          <div className="glass-card p-2 inline-flex rounded-full">
             {Object.keys(designCollections).map((category) => (
               <Button
                 key={category}
                 variant={activeCategory === category ? "default" : "ghost"}
                 size="sm"
-                className="rounded-full px-8"
+                className="rounded-full px-6"
                 onClick={() => {
                   setActiveCategory(category as keyof typeof designCollections);
                   setCurrentIndex(0);
@@ -137,65 +137,63 @@ const DesignVariationsSection = () => {
         </div>
 
         {/* Main Viewer */}
-        <div className="max-w-5xl mx-auto mb-16">
-          <div className="bg-background rounded-3xl overflow-hidden shadow-nova">
+        <div className="max-w-4xl mx-auto mb-12">
+          <Card className="glass-card overflow-hidden">
             <div className="relative">
               <img
                 src={currentCollection.designs[currentIndex].image}
                 alt={`${activeCategory} design ${currentIndex + 1}`}
-                className="w-full h-[400px] lg:h-[500px] object-cover"
+                className="w-full h-[500px] lg:h-[600px] object-cover"
               />
               
               {/* Navigation */}
               <Button
-                variant="outline"
+                variant="ghost"
                 size="icon"
-                className="absolute left-6 top-1/2 -translate-y-1/2 bg-background/90 backdrop-blur-sm hover:bg-background rounded-full"
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/20 backdrop-blur-sm hover:bg-background/30"
                 onClick={prevDesign}
               >
-                <ChevronLeft className="h-5 w-5" />
+                <ChevronLeft className="h-6 w-6" />
               </Button>
               
               <Button
-                variant="outline"
+                variant="ghost"
                 size="icon"
-                className="absolute right-6 top-1/2 -translate-y-1/2 bg-background/90 backdrop-blur-sm hover:bg-background rounded-full"
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/20 backdrop-blur-sm hover:bg-background/30"
                 onClick={nextDesign}
               >
-                <ChevronRight className="h-5 w-5" />
+                <ChevronRight className="h-6 w-6" />
               </Button>
 
               {/* Design Info */}
-              <div className="absolute bottom-8 left-8 right-8">
-                <div className="bg-background/90 backdrop-blur-sm rounded-2xl p-6">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h3 className="text-xl font-medium mb-1 text-foreground">
-                        {currentCollection.designs[currentIndex].name}
-                      </h3>
-                      <p className="text-muted-foreground text-sm">
-                        {currentCollection.designs[currentIndex].feature}
-                      </p>
-                    </div>
-                    <div className="text-right text-sm text-muted-foreground">
-                      {currentIndex + 1} / {currentCollection.designs.length}
-                    </div>
+              <div className="absolute bottom-6 left-6 right-6">
+                <div className="flex items-center justify-between text-white">
+                  <div>
+                    <h3 className="text-xl font-semibold mb-1">
+                      {currentCollection.designs[currentIndex].name}
+                    </h3>
+                    <p className="text-white/80 text-sm">
+                      {currentCollection.designs[currentIndex].feature}
+                    </p>
+                  </div>
+                  <div className="text-right text-sm text-white/60">
+                    {currentIndex + 1} / {currentCollection.designs.length}
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </Card>
         </div>
 
         {/* Thumbnail Grid */}
-        <div className="grid grid-cols-5 lg:grid-cols-10 gap-3 max-w-6xl mx-auto mb-16">
+        <div className="grid grid-cols-5 lg:grid-cols-10 gap-3 max-w-6xl mx-auto">
           {currentCollection.designs.map((design, index) => (
             <button
               key={index}
-              className={`aspect-square rounded-xl overflow-hidden transition-all duration-300 ${
+              className={`aspect-square rounded-lg overflow-hidden transition-all ${
                 index === currentIndex
-                  ? 'ring-2 ring-foreground scale-105'
-                  : 'opacity-70 hover:opacity-100 hover:scale-105'
+                  ? 'ring-2 ring-primary scale-105'
+                  : 'opacity-60 hover:opacity-100'
               }`}
               onClick={() => setCurrentIndex(index)}
             >
@@ -209,9 +207,9 @@ const DesignVariationsSection = () => {
         </div>
 
         {/* Category Description */}
-        <div className="text-center">
-          <div className="bg-background rounded-2xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-lg font-medium mb-3 text-foreground">
+        <div className="text-center mt-12">
+          <div className="glass-card p-6 max-w-2xl mx-auto">
+            <h3 className="text-lg font-semibold mb-2">
               {currentCollection.title}
             </h3>
             <p className="text-muted-foreground">
