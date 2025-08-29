@@ -98,7 +98,7 @@ const DesignDetailsSection = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/20 backdrop-blur-sm hover:bg-background/30"
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/20 backdrop-blur-sm hover:bg-background/30 hover-scale"
                 onClick={prevView}
               >
                 <ChevronLeft className="h-6 w-6" />
@@ -107,7 +107,7 @@ const DesignDetailsSection = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/20 backdrop-blur-sm hover:bg-background/30"
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/20 backdrop-blur-sm hover:bg-background/30 hover-scale"
                 onClick={nextView}
               >
                 <ChevronRight className="h-6 w-6" />
@@ -144,11 +144,11 @@ const DesignDetailsSection = () => {
           {technicalSpecs.map((spec, index) => (
             <div
               key={index}
-              className="glass-card p-6 hover-lift animate-fade-in group"
+              className="glass-card p-6 hover-lift hover-glow animate-fade-in group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4 group-hover:bg-primary/20 transition-colors">
-                <spec.icon className="w-6 h-6 text-primary" />
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4 group-hover:bg-primary/20 transition-all duration-300 hover-bounce">
+                <spec.icon className="w-6 h-6 text-primary group-hover:scale-110 transition-transform duration-300" />
               </div>
               
               <h3 className="text-lg font-semibold mb-3">{spec.title}</h3>
@@ -161,7 +161,7 @@ const DesignDetailsSection = () => {
 
         {/* Design Philosophy */}
         <div className="mt-16 text-center">
-          <div className="glass-card p-8 max-w-4xl mx-auto">
+          <div className="glass-card p-8 max-w-4xl mx-auto hover-glow">
             <h3 className="text-2xl font-semibold mb-4">
               Invisible Technology, Visible Results
             </h3>

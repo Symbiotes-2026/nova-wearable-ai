@@ -38,10 +38,10 @@ const Hero = () => {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button variant="hero" size="lg" className="text-lg px-8">
+              <Button variant="hero" size="lg" className="text-lg px-8 hover-glow hover-scale">
                 Get Early Access
               </Button>
-              <Button variant="glass" size="lg" className="text-lg px-8">
+              <Button variant="glass" size="lg" className="text-lg px-8 hover-lift">
                 Watch 15-sec Demo
               </Button>
             </div>

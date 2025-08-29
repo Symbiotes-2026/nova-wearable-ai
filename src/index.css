@@ -74,6 +74,11 @@
     font-family: 'Inter', 'system-ui', sans-serif;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', 'Inter', sans-serif;
+    font-weight: 300;
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -105,6 +110,39 @@
 
   .hover-lift {
     @apply transition-all duration-300 hover:scale-105 hover:-translate-y-1;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-primary/20;
+  }
+
+  .nav-link {
+    @apply relative transition-all duration-300 hover:text-primary;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .hover-slide {
+    @apply transition-all duration-300 hover:translate-x-1;
+  }
+
+  .hover-bounce {
+    @apply transition-all duration-300 hover:animate-bounce;
+  }
+
+  .hover-rotate {
+    @apply transition-all duration-300 hover:rotate-3;
+  }
+
+  .hover-scale {
+    @apply transition-all duration-300 hover:scale-105;
   }
 
   /* Section spacing */

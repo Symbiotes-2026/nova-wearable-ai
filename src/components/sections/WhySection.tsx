@@ -34,12 +34,12 @@ const WhySection = () => {
           {problems.map((problem, index) => (
             <div
               key={index}
-              className="glass-card p-8 hover-lift animate-fade-in"
+              className="glass-card p-8 hover-lift hover-glow animate-fade-in group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <problem.icon className="w-8 h-8 text-primary" />
+                <div className="flex-shrink-0 hover-bounce">
+                  <problem.icon className="w-8 h-8 text-primary transition-colors duration-300 group-hover:text-primary/80" />
                 </div>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   {problem.text}

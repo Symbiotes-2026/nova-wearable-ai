@@ -39,14 +39,14 @@ const Navigation = () => {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                className="nav-link text-muted-foreground font-medium"
               >
                 {item.label}
               </a>
             ))}
           </div>
 
-          <Button variant="hero" size="sm">
+          <Button variant="hero" size="sm" className="hover-glow">
             Get Early Access
           </Button>
         </div>
