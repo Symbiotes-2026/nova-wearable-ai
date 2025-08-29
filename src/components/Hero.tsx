@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import heroImage from '@/assets/nova-core-hero.jpg';
+const heroImage = '/lovable-uploads/4f5c4c6b-fad6-4384-b43b-6896313cae20.png';
 
 const Hero = () => {
   return (
@@ -52,7 +52,7 @@ const Hero = () => {
             <div className="relative">
               <img
                 src={heroImage}
-                alt="Nova AI Assistant Core with modular shells for glasses, hat, pendant, and bracelet"
+                alt="Nova Spectacles - Midnight Indigo & Matte Graphite with AI assistant features"
                 className="w-full max-w-lg h-auto rounded-2xl shadow-nova animate-glow-pulse"
               />
               <div className="absolute inset-0 bg-gradient-primary opacity-10 rounded-2xl" />
